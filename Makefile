@@ -28,6 +28,21 @@ genreadme: $(KROMAN_PROJ_READMES)
 $(KROMAN_PROJ_READMES): $(KROMAN_PROJ_README_TPLS)
 	./genreadme.sh $@ $(KROMAN_README_TPL)
 
+gitfetch:
+	./gitfetch.sh $(KROMAN_PROJS)
+
+gitstatus:
+	./gitstatus.sh $(KROMAN_PROJS)
+
+gitaddall:
+	./gitaddall.sh $(KROMAN_PROJS)
+
+gitpush:
+	./gitpush.sh $(KROMAN_PROJS)
+
+gitcommit:
+	./gitcommit.sh $(KROMAN_PROJS)
+
 copyclib:
 	@echo Do Nothing
 
